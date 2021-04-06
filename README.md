@@ -11,7 +11,7 @@ Enter password: **admin**
 
 Generate Key
 
-Generate Key:**/jpwJvRwN5TwmS8=**
+Generate Key: **/jpwJvRwN5TwmS8=**
 
 ```xml
 <vmps>
