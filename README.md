@@ -12,16 +12,24 @@ Generate Key
 
 Generate Key:**/jpwJvRwN5TwmS8=**
 
+```xml
 <vmps>
   <comment c="Sample vmps.xml configuration file for the NAC gui vmps.exe with Demo company. Change the server IP as appropriate"/>
   
   <settings company="RN-Purneftegaz"  StaticInvEnabled="0" NmapEnabled="1" AntiVirusEnabled="0"
   PatchCableEnabled="1"/>
 	<mysql server="192.168.1.1" port="3306" 
-        auth="**/jpwJvRwN5TwmS8=**" database="opennac" />
+        auth="/jpwJvRwN5TwmS8=" database="opennac" />
 	<mssql-inv server="UnusedServer\UnusedInstance"  
         auth="XX" database="YYY" />        	
 </vmps>
+```
+
+Добавляем пользователя админа, username должен соответствовать тому пользователя из под имени которого будет запускаться vmps:
+```mysql
+insert into opennac.users (username, Surname, GivenName, nac_rights) values
+('jsmith', 'John', 'Smith', 99);
+```
 
 
 
@@ -35,8 +43,7 @@ Generate Key:**/jpwJvRwN5TwmS8=**
 
 
 
-
-#Есть два уровня аутентификации и авторизации:
+>Есть два уровня аутентификации и авторизации:
 #А. Аутентификация и авторизация MySQL, графический интерфейс Windows использует определенного пользователя и пароль для подключения к БД.
 #Б. Идентификация и авторизация Windows GUI: GUI берет вашего текущего пользователя, вошедшего в систему Windows, чтобы идентифицировать вас, и использует #значение в поле nac_rights для этого пользователя, чтобы контролировать то, что вы можете делать (принудительное исполнение на стороне клиента). Мы называем #это «пользователем NAC»
 #MySQL пользователь.
