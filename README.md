@@ -19,7 +19,7 @@ Generate Key: **/jpwJvRwN5TwmS8=**
 <vmps>
   <comment c="Sample vmps.xml configuration file for the NAC gui vmps.exe with Demo company. Change the server IP as appropriate"/>
   
-  <settings company="RN-Purneftegaz"  StaticInvEnabled="0" NmapEnabled="1" AntiVirusEnabled="0"
+  <settings company="Kolobok"  StaticInvEnabled="0" NmapEnabled="1" AntiVirusEnabled="0"
   PatchCableEnabled="1"/>
 	<mysql server="192.168.1.1" port="3306" 
         auth="/jpwJvRwN5TwmS8=" database="opennac" />
